@@ -6,7 +6,7 @@ const routes = {
   '/': List,
   '/list': List,
   '/favorite': Favorite,
-  '/detail-page': Detail,
+  '/detail/:id': Detail,
 };
 
 export default routes;

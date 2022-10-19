@@ -206,22 +206,23 @@ nav.open, ul.nav.open{
 .detail-container{
   width: 100vw;
   height: 100vh;
-  background-color: #bf1722;
 }
 
 .container-detail{
   margin-top: 20px;
-  width: 90%;
-  background-color: aqua;
-  border: 1px solid black;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #FFD8A9;
 }
-img{
+.detail-main-img img{
+  border-radius: 8px 8px 0px 0px;
   height: auto;
-  max-width: 100%;
+  width: 100%;
   vertical-align: middle;
 }
 .detail-main-text{
   padding: 15px;
+  color: #ef7809;
 }
 .detail-main-text h2{
   font-size: 20px;
@@ -230,20 +231,37 @@ img{
   font-size: 16px;
   font-weight: 100;
 }
+.menu-rest{
+  margin-top: 10px;
+  text-decoration: double;
+  list-style-type: none;
+  padding-bottom: 10px;
+}
 
 .container-detail-menu{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .container-detail-review{
   background-color: beige;
-  border: 1px solid black;
+  border: 1px solid wheat;
   border-radius: 4px;
   padding: 10px;
 }
 
+.card-name{
+  font-style: none;
+  text-decoration: none;
+  color: black;
+}
+.review-card{
+  margin-bottom: 20px;
+  color: #ef7809;
+  padding: 10px;
+  border-bottom: 1px solid #ef7809;
+}
 .reviewer-name{
   font-size: 20px;
 }
@@ -252,6 +270,7 @@ img{
   font-size: 12px;
 }
 .review{
+  padding-bottom: 10px;
   font-size: 16px;
 }
 
@@ -261,7 +280,7 @@ img{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #db0000;
+  background-color: #ef7809;
   
   position: fixed;
   bottom: 16px;

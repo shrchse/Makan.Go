@@ -7,7 +7,9 @@ const createRestaurantCard = (restaurant) => `
   <img src="${CONFIG.BASE_IMAGE_URL_S + restaurant.pictureId}" alt="Gambar Restaurant ${restaurant.name}" width="100%">
 </div>
 <div class="card-content">
-  <div class="card-title"><h1>${restaurant.name}</h1></div>
+  <div class="card-title"><h1>
+    <a class="card-name" aria-label="${restaurant.name}" href="${`/#/detail/${restaurant.id}`}">${restaurant.name}</a>
+  </h1></div>
   <div class="card-sub"><h2>${restaurant.city}</h2></div>
   <div class="card-sub">
     <img src="./images/heros/Star.png" alt="Rating" width="18">
@@ -16,16 +18,65 @@ const createRestaurantCard = (restaurant) => `
 </div>
 </div>`;
 
-// const createLikeButtonTemplate = () => `
-//   <button aria-label="like this movie" id="likeButton" class="like">
-//      <i class="fa fa-heart-o" aria-hidden="true"></i>
-//   </button>
-// `;
+const createRestaurantDetail = (rest) => `
+<div class="container-detail">
+            <div class="detail-main-img">
+                <img src="${CONFIG.BASE_IMAGE_URL_S + rest.pictureId}" alt="${rest.name}">
+            </div>
+            <div class="detail-main-text">
+                <h1>${rest.name}</h1>
+                <h2>${rest.city}</h2>
+                <h3>Jl. Pegangsaan Timur No.12 Banjarbaru Utara</h3> <br>
+                <h3>Deskripsi Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis tempora veritatis, nesciunt ratione dolorem odio sed, earum enim soluta modi similique expedita dolores consectetur saepe quod placeat, reiciendis ex?</h3>
+                <br>
+                <h1>Daftar Menu</h1> <br>
+                <div class="container-detail-menu">
+                    <div class="detail-makanan">
+                        <h2>Makanan</h2>
+                        <ul>${rest.menus.foods.map((food) => `<li class="menu-rest">${food.name}</li>`).join('')}</ul>
+                    </div>
+                    <div class="detail-minuman">
+                        <h2>Minuman</h2>
+                        <ul>${rest.menus.drinks.map((drinks) => `<li class="menu-rest">${drinks.name}</li>`).join('')}</ul>
+                    </div>
+                </div>
+                <br> 
+                <h1>Review</h1> <br>
+                <div class="container-detail-review">
+                    <ul>${rest.customerReviews.map((custReview) => `</li>
+                      <div class="review-card">
+                        <div class="reviewer-name">
+                            ${custReview.name}
+                        </div>
+                        <div class="reviewer-date">
+                            ${custReview.date}
+                        </div>
+                        <div class="review">
+                            ${custReview.review}
+                        </div>
+                      </div></li>`).join('')} </ul>
+                </div>
+            </div>
+            <div class="wrapper-menu">
+                <div class="menu-card"></div>
+            </div>
+        </div>`;
 
-// const createLikedButtonTemplate = () => `
-//   <button aria-label="unlike this movie" id="likeButton" class="like">
-//     <i class="fa fa-heart" aria-hidden="true"></i>
-//   </button>
-// `;
+const createLikeButtonTemplate = () => `
+  <button aria-label="like this movie" id="likeButton" class="like">
+     <i class="fa fa-heart-o" aria-hidden="true"></i>
+  </button>
+`;
 
-export { createRestaurantCard };
+const createLikedButtonTemplate = () => `
+  <button aria-label="unlike this movie" id="likeButton" class="like">
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
+`;
+
+export {
+  createRestaurantCard,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
+  createRestaurantDetail,
+};

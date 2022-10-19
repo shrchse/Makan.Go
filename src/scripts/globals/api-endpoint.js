@@ -1,8 +1,8 @@
 import CONFIG from './config';
 
 const API_ENDPOINT = {
+  DETAIL: (id) => `${CONFIG.BASE_URL}detail/${id}`,
   LIST: `${CONFIG.BASE_URL}list`,
-  DETAIL: `${CONFIG.BASE_URL}/detail/id`,
 };
 
 export default API_ENDPOINT;
