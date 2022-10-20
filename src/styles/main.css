@@ -153,6 +153,10 @@ nav.open, ul.nav.open{
   margin: 30px 20px;
   text-decoration: underline;
 }
+#pages-section{
+  margin-top: 20px;
+  font-size: 35px;
+}
 
 .card-section{
   margin-top: 20px;
@@ -226,6 +230,7 @@ nav.open, ul.nav.open{
 }
 .detail-main-text h2{
   font-size: 20px;
+  margin-bottom: 10px;
 }
 .detail-main-text h3{
   font-size: 16px;
@@ -331,6 +336,31 @@ footer{
     width: 90%;
     height: 95%;
   }
+  .widht-break {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .container-detail-menu{
+    background-color: #FFD8A9;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  .detail-minuman.flip, .detail-makanan.flip{
+    direction: rtl;
+    border-radius: 8px;
+    width: 150px;
+    padding: 15px;
+    height: 200px;
+    overflow: scroll;
+    background-color: beige;
+  }
+  .menu-rest{
+    text-align: left;
+    border-bottom: 1px solid #F1A661;
+  }
+  .menu-type{
+    text-align: center;
+  }  
 }
 
 @media screen and (min-width: 1024px) {

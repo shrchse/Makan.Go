@@ -4,8 +4,8 @@ import { createRestaurantCard } from '../templates/template-creator';
 const Recommended = {
   async render() {
     return `
-          <h2>Restaurants</h2>
-            <div id="card-section" class="card-section"></div>
+    <section id="pages-section">Home</section>
+      <div id="card-section" class="card-section"></div>
         `;
   },
 

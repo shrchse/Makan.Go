@@ -19,48 +19,54 @@ const createRestaurantCard = (restaurant) => `
 </div>`;
 
 const createRestaurantDetail = (rest) => `
-<div class="container-detail">
-            <div class="detail-main-img">
-                <img src="${CONFIG.BASE_IMAGE_URL_S + rest.pictureId}" alt="${rest.name}">
-            </div>
-            <div class="detail-main-text">
-                <h1>${rest.name}</h1>
-                <h2>${rest.city}</h2>
-                <h3>Jl. Pegangsaan Timur No.12 Banjarbaru Utara</h3> <br>
-                <h3>Deskripsi Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis tempora veritatis, nesciunt ratione dolorem odio sed, earum enim soluta modi similique expedita dolores consectetur saepe quod placeat, reiciendis ex?</h3>
-                <br>
-                <h1>Daftar Menu</h1> <br>
-                <div class="container-detail-menu">
-                    <div class="detail-makanan">
-                        <h2>Makanan</h2>
-                        <ul>${rest.menus.foods.map((food) => `<li class="menu-rest">${food.name}</li>`).join('')}</ul>
-                    </div>
-                    <div class="detail-minuman">
-                        <h2>Minuman</h2>
-                        <ul>${rest.menus.drinks.map((drinks) => `<li class="menu-rest">${drinks.name}</li>`).join('')}</ul>
-                    </div>
-                </div>
-                <br> 
-                <h1>Review</h1> <br>
-                <div class="container-detail-review">
-                    <ul>${rest.customerReviews.map((custReview) => `</li>
-                      <div class="review-card">
-                        <div class="reviewer-name">
-                            ${custReview.name}
-                        </div>
-                        <div class="reviewer-date">
-                            ${custReview.date}
-                        </div>
-                        <div class="review">
-                            ${custReview.review}
-                        </div>
-                      </div></li>`).join('')} </ul>
-                </div>
-            </div>
-            <div class="wrapper-menu">
-                <div class="menu-card"></div>
-            </div>
-        </div>`;
+<div class="container-detail" tabindex="0">
+  <div class="widht-break">
+    <div class="detail-main-img">
+        <img src="${CONFIG.BASE_IMAGE_URL_S + rest.pictureId}" alt="${rest.name}">
+    </div>
+    <div class="detail-main-text">
+        <h1>${rest.name}</h1>
+        <h2>${rest.city}</h2>
+        <h3>${rest.address}</h3> <br>
+        </div>
+    </div>
+    <div class="detail-main-text">
+      <h3>${rest.description}</h3>
+    </div>
+      <br>
+    <div class="detail-main-text">
+      <h1>Daftar Menu</h1><br>
+      <div class="container-detail-menu">
+          <div class="detail-makanan flip">
+              <h2 class="menu-type">Makanan</h2>
+              <ul>${rest.menus.foods.map((food) => `<li class="menu-rest">${food.name}</li>`).join('')}</ul>
+          </div>
+          <div class="detail-minuman flip">
+              <h2 class="menu-type">Minuman</h2>
+              <ul>${rest.menus.drinks.map((drinks) => `<li class="menu-rest">${drinks.name}</li>`).join('')}</ul>
+          </div>
+      </div>
+      <br> 
+      <h1>Review</h1> <br>
+      <div class="container-detail-review">
+          <ul>${rest.customerReviews.map((custReview) => `</li>
+            <div class="review-card">
+              <div class="reviewer-name">
+                  ${custReview.name}
+              </div>
+              <div class="reviewer-date">
+                  ${custReview.date}
+              </div>
+              <div class="review">
+                  ${custReview.review}
+              </div>
+            </div></li>`).join('')} </ul>
+      </div>
+  </div>
+  <div class="wrapper-menu">
+      <div class="menu-card"></div>
+  </div>
+</div>`;
 
 const createLikeButtonTemplate = () => `
   <button aria-label="like this movie" id="likeButton" class="like">
