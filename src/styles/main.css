@@ -420,6 +420,9 @@ footer{
   .jumbotron{
     min-height: 700px;
   }
+  #main-content{
+    margin: 0px 100px 0px 100px;
+  }
 }
 @media screen and (min-width:1200px) {
   .jumbotron{
