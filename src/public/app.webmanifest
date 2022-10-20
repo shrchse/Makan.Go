@@ -1,6 +1,6 @@
 {
     "id": "Restauran-App",
-    "start_url": "./",
+    "start_url": "./index.html",
     "name": "Restaurants App",
     "short_name": "Restaurants",
     "description": "Restaurants Near You",
