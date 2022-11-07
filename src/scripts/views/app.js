@@ -26,4 +26,10 @@ class App {
   }
 }
 
+const skipToContent = document.querySelector('.skip-link');
+skipToContent.addEventListener('click', (event) => {
+  event.preventDefault();
+  document.querySelector('#maincontent').focus();
+});
+
 export default App;

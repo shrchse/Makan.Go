@@ -4,7 +4,7 @@ import CONFIG from '../../globals/config';
 const createRestaurantCard = (restaurant) => `
 <div class="card" tabindex="0" id="maincontent">
 <div class="card-image">
-  <img src="${CONFIG.BASE_IMAGE_URL_S + restaurant.pictureId}" alt="Gambar Restaurant ${restaurant.name}" width="100%">
+  <img src="${CONFIG.BASE_IMAGE_URL_S + restaurant.pictureId}" alt="Restaurant ${restaurant.name}" width="100%">
 </div>
 <div class="card-content">
   <div class="card-title"><h1>
@@ -24,13 +24,13 @@ const createRestaurantDetail = (rest) => `
     <div class="detail-main-img">
         <img src="${CONFIG.BASE_IMAGE_URL_S + rest.pictureId}" alt="${rest.name}">
     </div>
-    <div class="detail-main-text">
+    <div tabindex="0" class="detail-main-text">
         <h1>${rest.name}</h1>
         <h2>${rest.city}</h2>
         <h3>${rest.address}</h3> <br>
         </div>
     </div>
-    <div class="detail-main-text">
+    <div tabindex="0" class="detail-main-text">
       <h3>${rest.description}</h3>
     </div>
       <br>
@@ -39,18 +39,18 @@ const createRestaurantDetail = (rest) => `
       <div class="container-detail-menu">
           <div class="detail-makanan flip">
               <h2 class="menu-type">Makanan</h2>
-              <ul>${rest.menus.foods.map((food) => `<li class="menu-rest">${food.name}</li>`).join('')}</ul>
+              <ul>${rest.menus.foods.map((food) => `<li tabindex="0" class="menu-rest">${food.name}</li>`).join('')}</ul>
           </div>
           <div class="detail-minuman flip">
               <h2 class="menu-type">Minuman</h2>
-              <ul>${rest.menus.drinks.map((drinks) => `<li class="menu-rest">${drinks.name}</li>`).join('')}</ul>
+              <ul>${rest.menus.drinks.map((drinks) => `<li tabindex="0" class="menu-rest">${drinks.name}</li>`).join('')}</ul>
           </div>
       </div>
       <br> 
       <h1>Review</h1> <br>
       <div class="container-detail-review">
           <ul>${rest.customerReviews.map((custReview) => `</li>
-            <div class="review-card">
+            <div class="review-card" tabindex="0">
               <div class="reviewer-name">
                   ${custReview.name}
               </div>

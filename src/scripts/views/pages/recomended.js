@@ -5,8 +5,7 @@ const Recommended = {
   async render() {
     return `
     <section id="pages-section">Home</section>
-      <div id="card-section" class="card-section"></div>
-        `;
+      <div id="card-section" class="card-section"></div>`;
   },
 
   async afterRender() {

@@ -5,7 +5,9 @@ const Favorite = {
   async render() {
     return `
         <section id="pages-section">Favorite</section>
+        <div id="maincontent" tabindex="0">
           <div id="card-section" class="card-section"></div>
+        </div>
       `;
   },
 
