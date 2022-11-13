@@ -109,8 +109,6 @@ nav.open, ul.nav.open{
   display: flex;
   flex-direction: column-reverse;
   width: auto;
-  min-height: 600px;
-  background-image: url('../public/images/heros/hero-image_2.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -199,7 +197,7 @@ nav.open, ul.nav.open{
   font-weight: 300;
 }
 .card-sub h2{
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 100;
 }
 .card-sub{
@@ -260,7 +258,7 @@ nav.open, ul.nav.open{
   font-style: none;
   text-decoration: none;
   color: black;
-  font-size: 40px;
+  font-size: 24px;
 }
 .review-card{
   margin-bottom: 20px;
@@ -417,9 +415,6 @@ footer{
   }
   li.nav_item:hover{
     color: black;
-  }
-  .jumbotron{
-    min-height: 700px;
   }
   #main-content{
     margin: 0 90px 0 90px;

@@ -4,10 +4,10 @@ import CONFIG from '../../globals/config';
 const createRestaurantCard = (restaurant) => `
 <div class="card" tabindex="0" id="maincontent">
 <div class="card-image">
-  <img src="${CONFIG.BASE_IMAGE_URL_S + restaurant.pictureId}" alt="Restaurant ${restaurant.name}" width="100%">
+  <img data-src="${CONFIG.BASE_IMAGE_URL_S + restaurant.pictureId}" class="lazyload" alt="Restaurant ${restaurant.name}" width="100%">
 </div>
 <div class="card-content">
-  <div class="card-title"><h1>
+  <div class="card-title">
     <a class="card-name" aria-label="${restaurant.name}" href="${`/#/detail/${restaurant.id}`}">${restaurant.name}</a>
   </h1></div>
   <div class="card-sub"><h2>${restaurant.city}</h2></div>
@@ -22,7 +22,7 @@ const createRestaurantDetail = (rest) => `
 <div class="container-detail" tabindex="0">
   <div class="widht-break">
     <div class="detail-main-img">
-        <img src="${CONFIG.BASE_IMAGE_URL_S + rest.pictureId}" alt="${rest.name}">
+        <img class="lazyload" src="${CONFIG.BASE_IMAGE_URL_S + rest.pictureId}" alt="${rest.name}">
     </div>
     <div tabindex="0" class="detail-main-text">
         <h1>${rest.name}</h1>
@@ -68,21 +68,21 @@ const createRestaurantDetail = (rest) => `
   </div>
 </div>`;
 
-const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
+const createLikeRestaurantButtonTemplate = () => `
+  <button aria-label="like this restaurant" id="likeButton" class="like">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
 
-const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
+const createUnlikeRestaurantButtonTemplate = () => `
+  <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
 export {
   createRestaurantCard,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate,
+  createLikeRestaurantButtonTemplate as createLikeButtonTemplate,
+  createUnlikeRestaurantButtonTemplate as createLikedButtonTemplate,
   createRestaurantDetail,
 };
