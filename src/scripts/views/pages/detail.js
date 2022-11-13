@@ -25,7 +25,7 @@ const Detail = {
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
-      favoriteResto: favoriteRestaurantsIdb,
+      favoriteRestaurant: favoriteRestaurantsIdb,
       rest: {
         id: url.id,
         name: rest.restaurant.name,

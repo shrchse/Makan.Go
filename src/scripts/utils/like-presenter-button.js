@@ -2,10 +2,11 @@
 import { createLikeButtonTemplate, createLikedButtonTemplate } from '../views/templates/template-creator';
 
 const LikeButtonInitiator = {
-  async init({ likeButtonContainer, favoriteResto, rest }) {
+  async init({ likeButtonContainer, favoriteRestaurant, rest }) {
     this.likeButtonContainer = likeButtonContainer;
-    this._restaurant = favoriteResto;
     this.resto = rest;
+    this._restaurant = favoriteRestaurant;
+
     await this.renderButton();
   },
 

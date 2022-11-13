@@ -14,7 +14,7 @@ const itActsAsFavoriteRestaurantModel = (favoriteResto) => {
   });
 
   it('should refuse a Restaurant from being added if it does not have the correct property', async () => {
-    favoriteResto.putRestaurant({ aProperty: 'property' });
+    favoriteResto.putRestaurant({ Property: 'property' });
 
     expect(await favoriteResto.getAllRestaurant())
       .toEqual([]);

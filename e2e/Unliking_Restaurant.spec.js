@@ -13,10 +13,10 @@ Scenario('Showing empty liked restaurant', ({ I }) => {
 });
 
 Scenario('unliking one restaurant', async ({ I }) => {
-  I.dontSeeElement('.card-name', 2);
+  I.dontSeeElement('.card-name', 4);
 
   I.amOnPage('');
-  I.waitForElement('.card-name', 2);
+  I.waitForElement('.card-name', 4);
 
   const firstResto = locate('.card-name').first();
   const firstRestoName = await I.grabTextFrom(firstResto);

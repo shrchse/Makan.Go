@@ -25,13 +25,13 @@ Scenario('liking one restaurant', async ({ I }) => {
   const firstRestoName = await I.grabTextFrom(firtsResto);
   I.click(firtsResto);
 
-  I.waitForElement('#likeButton', 2);
+  I.waitForElement('#likeButton', 4);
 
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
   I.amOnPage('/#/favorite');
-  I.waitForElement('.card', 2);
+  I.waitForElement('.card', 4);
   I.seeElement('.card');
   const likedRestaurant = await I.grabTextFrom('.card-name');
 
