@@ -259,6 +259,8 @@ nav.open, ul.nav.open{
   text-decoration: none;
   color: black;
   font-size: 24px;
+  border: 10px solid transparent;
+  border-left: none;
 }
 .review-card{
   margin-bottom: 20px;
